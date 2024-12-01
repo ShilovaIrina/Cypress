@@ -1,0 +1,18 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "chrome": "npm cypress run --browser chrome --headless",
+    "firefox": "npm cypress run --browser firefox --headless",
+    "chromeHead": "npm cypress run --browser chrome --headded ",
+    "firefoxHead": "npm cypress run --browser firefox --headded "
+  },
+  "keywords": [],
+  "author": "Shilova",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^13.16.0"
+  }
+}
