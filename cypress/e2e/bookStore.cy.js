@@ -1,16 +1,16 @@
 describe('the book store 2e2 test', () => {
-  it.skip('Should open the main page', () => {
+  it('Should open the main page', () => {
     cy.visit("/"),
     cy.get(".text-light>.ml-2");
   });
 
-  it.skip('Should valid authentication', () => {
+  it('Should valid authentication', () => {
     cy.visit("/");
     cy.login("test@test.com", "test");
     cy.contains("Добро пожаловать test@test.com").should("be.visible");
   });
 
-  it.skip('Should not login with empty login', () => {
+  it('Should not login with empty login', () => {
     cy.visit("/");
     cy.contains('Log in').click();
     cy.get("#pass").type("test");
@@ -18,7 +18,7 @@ describe('the book store 2e2 test', () => {
     cy.get("#mail").then(($el) => $el[0].checkValidity()).should("be.false");
   });
   
-  it.skip('Should not login with empty password', () => {
+  it('Should not login with empty password', () => {
     cy.visit("/");
     cy.contains('Log in').click();
     cy.get("#mail").type("test@test.com");
@@ -26,7 +26,7 @@ describe('the book store 2e2 test', () => {
     cy.get("#pass").then(($el) => $el[0].checkValidity()).should("be.false");
   });
 
-  it.skip('Should add books', () => {
+  it('Should add books', () => {
     cy.visit("/");
     cy.login("test@test.com", "test");
     cy.createBook(
